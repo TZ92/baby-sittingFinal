@@ -1,0 +1,60 @@
+{# empty Twig template #}
+{% extends "PidevbackBundle::layout.html.twig" %} 
+
+{% block title %}PidevbackBundle:Administrateur:ajout{% endblock %}
+
+{% block body %}
+<h1> Formulaire de recherche </h1>
+<form  method="POST" action="" >
+    id : <input type="text" name="idevenement"/>
+    <input class="btn btn-primary" type="submit" value="Chercher">
+</form>
+<h1> Liste des Evenement </h1>
+<table class="table-hover">
+    <tr>
+        <th>Id evenement</th>
+        <th>Nom evenement</th>
+        <th>Thème de l'evenement</th>
+        <th>Adresse evenement</th>
+        <th>Nombre de place</th>
+        <th>Affiche evenement</th>
+        <th></th>
+        <th></th>
+    </tr>
+    {% for m in Evenement %}
+        <tr>
+            <td>{{m.idevenement}}</td>
+            <td>{{m.nomevenement}}</td>
+            <td>{{m.themeevenement}}</td>
+            <td>{{m.adresseevenement}}</td>
+            <td>{{m.nbplacemax}}</td>
+            <td><img width="150" height="200" src="{{ asset('uploads/evenement/'~m.path) }}"</td>
+            <td>
+                <a role="btn" class="btn btn-default" href="{{path("updateEvenement",{idevenement:m.idevenement})}}">MAJ</a>
+            </td>
+            
+            <td>
+                <a role="btn" class="btn btn-default"  href="{{path("deleteEvenement",{idevenement:m.idevenement})}}">Supprimer</a>
+            </td>
+      
+        </tr>
+        
+    {% endfor %}
+    <td>
+   <a href="{{path('ajoutEvenement')}}" role="btn" class="btn btn-default">Create new entry</a>
+                </td>
+                <td>
+                    
+                </td>
+                <td>
+                    
+                </td>
+                <td>
+                    
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+</table>
+{% endblock %}

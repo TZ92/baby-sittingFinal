@@ -1,0 +1,189 @@
+
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+
+<!DOCTYPE <!DOCTYPE html>
+    <html lang="fr">
+        <head>
+            <title>BabySittin : Vos enfants c'est notre résponsabilité</title>
+            <link rel="icon" type="image/png" sizes="96x96" href="{{asset('images/favicon-96x96.png')}}">
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="description" content="">
+            <meta name="author" content="">
+
+            <!-- Custom CSS -->
+            <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
+            <!-- Bootstrap Core CSS -->
+            <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+            <!-- Morris Charts CSS -->
+            <link href="{{asset('css/plugins/morris.css')}}" rel="stylesheet">
+
+            <!-- Custom Fonts -->
+            <link href="{{asset('font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+        </head>
+        <body>
+            <div class="form-group">
+            {% block fos_user_content %}
+                                    {% if error %}
+                                        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                                    {% endif %}
+                                    <form action="{{ path("fos_user_security_check") }}" class="navbar-form navbar-left" method="post">
+                                        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                                        <div class="form-group-sm">
+                                            <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" class="form-control" placeholder="{{ 'security.login.username'|trans }}">
+                                            <input type="password" id="password" name="_password" required="required" type="text" class="form-control" placeholder="{{ 'security.login.remember_me'|trans }}">
+                                            <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                                            <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+                                        </div>
+                                        <center><input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}"  class="btn myBtn1"/>
+                                            <br/><a href="{{ path('fos_user_resetting_request')}}">Mot de passe oublié ?</a>
+                                        </center>
+                                    </form>
+                                    {% endblock fos_user_content %}
+            </div>
+            <header>
+                <div class="headerBloc">
+                    <div class="logo">
+                        <a href="index.html"><img src="{{asset('images/logo1.png')}}" alt=""/></a>
+                    </div>
+
+                    <div class="social">
+                        <img src="{{asset('images/social.png')}}" alt="">
+                    </div>
+
+                    
+
+                       
+                        
+                        
+                            
+                            
+                                
+                               
+                            
+                    
+                </header>
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                </center>
+                            </button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#">Recherche <span class="sr-only">(current)</span></a></li>
+                                <li><a href="#">Liste des missions</a></li>
+                                <li><a href="#">Espace garderie</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+
+               <div class="bannerForm" >
+			<div class="formBloc">
+				<div class="formBG">
+					<h3>Trouver une personne qui vous convient</h3>
+                                        <center><form class="form1">
+						<select class="btn btn-default dropdown-toggle" name="select">
+							<option>Sexe</option>
+							<option>Féniminin</option>
+							<option>Masculin</option>
+						</select>
+						<select class="btn btn-default dropdown-toggle" name="select">
+							<option>Age</option>
+							<option>18</option>
+							<option>19</option>
+						</select>
+						<select class="btn btn-default dropdown-toggle" name="select">
+							<option>Ville</option>
+							<option>Tunis</option>
+							<option>Ariana</option>
+						</select>
+						<select class="btn btn-default dropdown-toggle" name="select">
+							<option>Prix</option>
+							<option>50</option>
+							<option>60</option>
+						</select>
+						<select class="btn btn-default dropdown-toggle" name="select">
+							<option>Note</option>
+							<option>5</option>
+							<option>6</option>
+						</select>
+						 <center><button type="submit" class="btn myBtn2">Je cherche !</button>
+					</form>
+                                            
+                                    </center>
+				</div>
+                            <div style='color:grey; position:relative; bottom:100px; left:120px; '>
+                                <h4>*BabySitting vous propose une recherche avancee a fin de trouver votre perle rare.</h4>
+                                <h4>**Vous n'etes pas oblige a remplir tout les champs.</h4>
+                            </div>
+			</div>
+		</div>
+                <div class="contenu">
+                    <img src="{{asset('images/avis.png')}}" alt="">
+                </div>
+                <footer>
+                    <table>
+                        <tr>
+                            <td>Suivez-nous sur</td>
+                            <td>À propos</td>
+                            <td>Aides et Conseils</td>
+                            <td>Informations</td>
+                            <td>Services</td>
+                        </tr>
+                        <tr>
+                            <td>menu</td>
+                            <td>menu</td>
+                            <td>menu</td>
+                            <td>menu</td>
+                            <td>menu</td>
+                        </tr>
+                        <tr>
+                            <td>menu</td>
+                            <td>menu</td>
+                            <td>menu</td>
+                            <td>menu</td>
+                            <td>menu</td>
+                        </tr>
+                        <tr>
+                            <td>menu</td>
+                            <td>menu</td>
+                            <td>menu</td>
+                            <td>menu</td>
+                            <td>menu</td>
+                        </tr>
+                        <tr>
+                            <td>menu</td>
+                            <td>menu</td>
+                            <td>menu</td>
+                            <td>menu</td>
+                            <td>menu</td>
+                        </tr>
+                    </table>
+                </footer>
+                <!-- jQuery -->
+                <script src="{{asset('js/jquery.js')}}"></script>
+
+                <!-- Bootstrap Core JavaScript -->
+                <script src="{{asset('js/bootstrap.min.js')}}"></script>
+
+                <!-- Morris Charts JavaScript -->
+                <script src="{{asset('js/plugins/morris/raphael.min.js')}}"></script>
+                <script src="{{asset('js/plugins/morris/morris.min.js')}}"></script>
+                <script src="{{asset('js/plugins/morris/morris-data.js')}}"></script>	
+            </body>
+        </html>

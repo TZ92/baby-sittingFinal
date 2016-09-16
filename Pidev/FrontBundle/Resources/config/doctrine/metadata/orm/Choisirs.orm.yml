@@ -1,0 +1,17 @@
+Choisirs:
+    type: entity
+    table: choisirs
+    fields:
+        idService:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            column: id_service
+        idOffre:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            column: id_offre
+    lifecycleCallbacks: {  }

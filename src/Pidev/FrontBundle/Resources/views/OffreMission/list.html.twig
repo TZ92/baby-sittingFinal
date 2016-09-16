@@ -1,0 +1,47 @@
+{% extends "PidevFrontBundle::layout.html.twig" %} 
+
+{% block bannerForm %}
+    
+    {% endblock %}
+{% block body %}
+<h1>Formulaire de recherche</h1>
+
+        <form action="" method="post">
+            Service: <input type="text" name="lieuMission"/>
+            <input type="submit" value="Rechercher"/>
+        </form>
+<h1> Liste des offres </h1>
+<table  class="table table-hover" style="color:#000">
+    <tr>
+        
+        <th>Lieu mission</th>
+        <th>Date de début</th>
+        <th>Date de fin</th>
+        <th>Horaire de garde</th>
+        <th>Nombre d'enfants</th>
+        <th>Sexe</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      
+        
+        
+    </tr>
+    {% for o in offres %}
+        <tr>
+            
+            <td>{{o.lieuMission}}</td>
+            <td>{{o.dateDebut|date('d/m/Y')}}</td>
+            <td>{{o.dateFin|date('d/m/Y')}}</td>
+            <td>{{o.horaireGarde}}</td>
+            <td>{{o.nombreEnfant}}</td>
+            <td>{{o.sexe}}</td>
+            <td><a role="btn" class="btn btn-default" href="{{path("pidev_backBundle_delete",{'id':o.idOffre})}}">supprimer</a></td>
+            <td><a role="btn" class="btn btn-default" href="{{path("Update_Offre",{'id':o.idOffre})}}">Mise a jour</a></td>
+            <td><a role="btn" class="btn btn-default" href="{{path('pidev_map_map')}}">Localiser Mission</a></td>
+
+        </tr>
+        
+    {% endfor %}
+</table>
+{% endblock %}

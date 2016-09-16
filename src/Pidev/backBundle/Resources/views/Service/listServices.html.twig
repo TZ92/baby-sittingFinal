@@ -1,0 +1,49 @@
+{% extends "PidevbackBundle::layout.html.twig" %} 
+{% block body %}
+        <h3>Formulaire de recherche</h3>
+
+        <form action="" method="post">
+            Service: <input type="text" name="typeService"/>
+            <input class="btn btn-primary" type="submit" value="Rechercher"/>
+        </form>
+        <br>
+        <br>
+        
+        <table class="table table-hover" >
+            <tr>
+                <th>Service</th>
+                <th>Description</th>
+                <th>Catégorie</th>
+                <th></th>
+                <th></th>
+            </tr>
+            {% for s in Services %}
+                <tr>
+                    <td>{{s.typeService}}</td>
+                    <td>{{s.description}}</td>
+                    <td>{{s.idCategorie.nomCategorie}}</td> 
+                    <td><a role="btn" class="btn btn-default" href="{{path("pidevback_delete",{ 'id':s.idservice})}}">Supprimer</a></td>
+                    <td><a role="btn" class="btn btn-default" href="{{path("pidevback_update",{ 'id':s.idservice})}}">Mettre a jour</a></td> 
+                </tr>   
+            {% endfor %}
+            <tr>
+                <td>
+            <a href="{{path('pidevback_ajout')}}" role="btn" class="btn btn-default">Create new entry</a>
+                </td>
+                <td>
+                    
+                </td>
+                <td>
+                    
+                </td>
+                <td>
+                    
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+        </table>
+{% endblock %}
+
+

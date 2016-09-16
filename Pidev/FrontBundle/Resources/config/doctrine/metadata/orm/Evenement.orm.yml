@@ -1,0 +1,44 @@
+Evenement:
+    type: entity
+    table: evenement
+    fields:
+        idevenement:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            column: idEvenement
+            generator:
+                strategy: IDENTITY
+        nomevenement:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: nomEvenement
+        themeevenement:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: themeEvenement
+        adresseevenement:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: adresseEvenement
+        nbplacemax:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: nbPlaceMax
+        afficheevenement:
+            type: blob
+            nullable: false
+            column: afficheEvenement
+        dateevenement:
+            type: date
+            nullable: false
+            column: dateEvenement
+    lifecycleCallbacks: {  }

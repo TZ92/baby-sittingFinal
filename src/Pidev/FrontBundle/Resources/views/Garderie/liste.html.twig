@@ -1,0 +1,40 @@
+{% extends "PidevFrontBundle::layout2.html.twig" %} 
+
+{% block bannerForm %}
+    
+    {% endblock %}
+{% block body %}
+    <h1> Formulaire de recherche </h1>
+
+<form  method="POST" action="" >
+    Liste des garderie par ville : <input type="text" name="villeGarderie"/>
+    <input type="submit" value="Chercher">
+</form>
+<h1> Liste des garderie </h1>
+<table  class="table table-hover" style="color:black;">
+    <tr>
+        <th>Id Garderie</th>
+        <th>Nom garderie</th>
+        <th>adresse garderie</th>
+        <th>Ville</th>
+        <th>Numéro tél :</th>
+        <th>Adresse e-mail</th>
+        <th>Capacité</th>
+        <th>Description</th>
+        
+    </tr>
+    {% for m in Garderie %}
+        <tr>
+            <td>{{m.idGarderie}}</td>
+            <td>{{m.nomGarderie}}</td>
+            <td>{{m.adresseGarderie}}</td>
+            <td>{{m.villeGarderie}}</td>
+            <td>{{m.numTel}}</td>
+            <td>{{m.contactGarderie}}</td>
+            <td>{{m.capaciteGarderie}}</td>
+            <td>{{m.descriptionGarderie}}</td>
+            
+        
+    {% endfor %}
+</table>
+    {% endblock %}

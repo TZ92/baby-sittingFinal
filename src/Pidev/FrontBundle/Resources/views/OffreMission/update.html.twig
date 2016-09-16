@@ -1,0 +1,12 @@
+{% extends "PidevFrontBundle::layout2.html.twig" %} 
+
+{% block bannerForm %}
+    
+    {% endblock %}
+{% block body %}
+<h1>Mise a jour d'une offre</h1>
+<form action="" method="POST" {{form_enctype(Form)}}> {#  #}
+{{form_widget(Form)}}
+    <input type="submit" value="mettre à jour">
+</form>
+{% endblock %}

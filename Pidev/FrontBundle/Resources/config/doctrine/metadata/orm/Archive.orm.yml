@@ -1,0 +1,38 @@
+Archive:
+    type: entity
+    table: archive
+    fields:
+        idArchive:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            column: id_archive
+            generator:
+                strategy: IDENTITY
+        idreclamation:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: idReclamation
+        sujetreclamation:
+            type: string
+            length: 250
+            fixed: false
+            nullable: false
+            column: sujetReclamation
+        datereclamation:
+            type: date
+            nullable: false
+            column: dateReclamation
+        email:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+        type:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+    lifecycleCallbacks: {  }

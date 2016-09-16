@@ -1,0 +1,21 @@
+Contacter:
+    type: entity
+    table: contacter
+    fields:
+        idParent:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            column: id_parent
+    oneToOne:
+        idBabysitter:
+            targetEntity: Babysitter
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_babysitter:
+                    referencedColumnName: id_babysitter
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

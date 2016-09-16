@@ -1,0 +1,17 @@
+Evaluer:
+    type: entity
+    table: evaluer
+    fields:
+        idParent:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            column: id_parent
+        idService:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            column: id_service
+    lifecycleCallbacks: {  }

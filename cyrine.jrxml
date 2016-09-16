@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cyrine" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="85ddf95d-95f4-445e-a97c-1f995290db95">
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     offre_mission.`id_offre` AS offre_mission_id_offre,
+     offre_mission.`lieu_mission` AS offre_mission_lieu_mission,
+     offre_mission.`date_debut` AS offre_mission_date_debut,
+     offre_mission.`date_fin` AS offre_mission_date_fin,
+     offre_mission.`horaire_garde` AS offre_mission_horaire_garde,
+     offre_mission.`nombre_enfant` AS offre_mission_nombre_enfant
+FROM
+     `offre_mission` offre_mission]]>
+	</queryString>
+	<field name="offre_mission_id_offre" class="java.lang.Integer"/>
+	<field name="offre_mission_lieu_mission" class="java.lang.String"/>
+	<field name="offre_mission_date_debut" class="java.sql.Date"/>
+	<field name="offre_mission_date_fin" class="java.sql.Date"/>
+	<field name="offre_mission_horaire_garde" class="java.lang.String"/>
+	<field name="offre_mission_nombre_enfant" class="java.lang.Integer"/>
+	<group name="offre_mission_id_offre">
+		<groupExpression><![CDATA[$F{offre_mission_id_offre}]]></groupExpression>
+		<groupHeader>
+			<band height="37">
+				<frame>
+					<reportElement uuid="c8b50f16-230f-4f04-840e-1afec8d797a8" mode="Opaque" x="-21" y="7" width="843" height="24" forecolor="#B89F7D" backcolor="#F2EBDF"/>
+					<rectangle>
+						<reportElement uuid="88ad2e99-9499-4faf-9f1f-63992b58f52d" mode="Opaque" x="21" y="0" width="36" height="24" backcolor="#736343"/>
+						<graphicElement>
+							<pen lineWidth="0.0"/>
+						</graphicElement>
+					</rectangle>
+					<textField>
+						<reportElement uuid="0076b402-4adc-4eec-a912-fa191905e87c" style="SubTitle" x="68" y="0" width="755" height="24" forecolor="#736343"/>
+						<textElement>
+							<font isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{offre_mission_id_offre}]]></textFieldExpression>
+					</textField>
+				</frame>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="6"/>
+		</groupFooter>
+	</group>
+	<group name="offre_mission_lieu_mission">
+		<groupExpression><![CDATA[$F{offre_mission_lieu_mission}]]></groupExpression>
+		<groupHeader>
+			<band height="30">
+				<textField>
+					<reportElement uuid="beb9ec39-73c2-40be-bac0-7a8815dd4620" style="SubTitle" x="0" y="4" width="802" height="20"/>
+					<textElement>
+						<font size="16" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{offre_mission_lieu_mission}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="offre_mission_date_debut">
+		<groupExpression><![CDATA[$F{offre_mission_date_debut}]]></groupExpression>
+	</group>
+	<group name="offre_mission_date_fin">
+		<groupExpression><![CDATA[$F{offre_mission_date_fin}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<image>
+				<reportElement uuid="c1110b13-b68e-4c43-8f0c-d483b6171959" x="0" y="0" width="164" height="126"/>
+				<imageExpression><![CDATA["coffee.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="1ea5ac84-0425-4493-b806-b2e8946b72f1" style="Title" x="270" y="0" width="263" height="62"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Coffee Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c2da3033-4130-48f6-b8cf-1b67d5c25384" style="SubTitle" x="303" y="62" width="196" height="22"/>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Coffee SubTitle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4f18200c-329d-424a-b124-e11599e03d20" x="172" y="94" width="383" height="42"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor purus gravida arcu aliquam mattis. Donec et nulla libero, ut varius massa. Nulla sed turpis elit. Etiam aliquet mauris a ligula hendrerit in auctor leo lobortis.]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="e318b1ee-a9e9-44c6-bad5-a34e360f737d" x="633" y="-73" width="219" height="209"/>
+				<imageExpression><![CDATA["coffee_stain.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement uuid="70fdcf1a-dfae-457c-ac21-aa3fd98af085" positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="b3988cf9-d69e-4679-9a1b-72728375bf00" style="Column header" x="0" y="0" width="401" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[offre_mission_horaire_garde]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ffb072f3-22d2-447b-83f9-5354b6457391" style="Column header" x="401" y="0" width="401" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[offre_mission_nombre_enfant]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement uuid="372cc345-2b9c-4b94-a7bd-a7c75c0508f8" style="Row" mode="Opaque" x="0" y="0" width="802" height="15"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="26dc9359-b366-40be-8b6b-1a8de1819081" style="Detail" x="0" y="0" width="401" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{offre_mission_horaire_garde}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="7426f36a-9acd-4bc3-852b-b018010d5d03" style="Detail" x="401" y="0" width="401" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{offre_mission_nombre_enfant}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement uuid="0577893c-cb8d-4470-a5ca-3e55074030df" positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement uuid="0e6ddbfe-5371-4959-a846-85e179856a14" mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF"/>
+				<textField evaluationTime="Report">
+					<reportElement uuid="8f647235-aede-432d-b787-f730d5f2a6b0" style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="27de0d52-7b40-4d16-9d0f-46d0a66cd992" style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement uuid="06a4446f-7b8b-4eb6-943e-db98530851f2" style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

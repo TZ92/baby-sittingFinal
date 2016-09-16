@@ -1,0 +1,99 @@
+{% extends "PidevbackBundle::layout.html.twig" %} 
+       {% block body %}
+    <h1>Baby-Sitter - {{baby.prenomBabysitter}}</h1>
+    <table class="table table-hover">
+        <tbody>
+            <tr>
+                <th>cin</th>
+                <td>{{baby.cinBabysitter}}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{baby.nomBabysitter}}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{baby.prenomBabysitter}}</td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td>{{baby.ageBabysitter }}</td>
+            </tr>
+            <tr>
+                <th>Sexe</th>
+                <td>{{baby.sexeBabysitter }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{baby.ville }}</td>
+            </tr>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{baby.adresseBabysitter }}</td>
+            </tr>
+            <tr>
+                <th>Numero de Telephne </th>
+                <td>{{baby.numtelBabysitter }}</td>
+            </tr>
+            <tr>
+                <th>E-mail </th>
+                <td>{{baby.mailBabysitter }}</td>
+            </tr>
+            <tr>
+                <th>Niveau </th>
+                <td>{{baby.niveauBabysitter }}</td>
+            </tr>
+            <tr>
+                <th>Nombre de Mission </th>
+                <td>{{baby.nbMissionBabysitter }}</td>
+            </tr>
+            <tr>
+                <th>Nombre D'enfant(s) garder </th>
+                <td>{{baby.nbEnfantBabysitter }}</td>
+            </tr>
+            <tr>
+                <th>Distance Maximale</th>
+                <td>{{baby.distancemaxBabysitter }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{baby.descriptionBabysitter }}</td>
+            </tr>
+            <tr>
+                <th>Tarif par heur</th>
+                <td>{{baby.tarifHeur }}</td>
+            </tr>
+            <tr>
+                <th>Note</th>
+                <td>{{baby.note }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+            <table class="table-responsive table-hover table" >
+    <tr>
+        <td>
+        <a class="btn btn-default"  role="btn" href="{{path('listeBaby') }}">
+            Back to the list
+        </a>
+    </td>
+    <td>
+        &emsp;&emsp;&emsp;&emsp;
+    </td>
+    <td>
+        &emsp;&emsp;&emsp;
+    </td>
+    
+    <td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        &emsp;&emsp;&emsp;
+        <a class="btn btn-primary"  role="btn" href="{{path("updateBaby",{'id':baby.idBabysitter})}}">
+          Mettre a jour
+        </a>&emsp;
+        <a class="btn btn-primary"  role="btn" href="{{path("deleteBaby",{'id':baby.idBabysitter})}}">
+          Supprimer
+        </a>
+    </td>
+</tr>
+            </table>
+{% endblock %}

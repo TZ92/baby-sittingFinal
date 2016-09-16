@@ -1,0 +1,29 @@
+{% extends "PidevbackBundle::layout.html.twig" %} 
+{% block body %}
+
+        {# La partie du code sans le template #}
+        <h1>Mise a jour d'un service</h1>
+        <form action="" method="post">
+            {# {{ form_widget(Form) }} #}
+            <table class="table table-hover">
+                <tr>
+                    <td>Service :</td>
+                    <td>{{ form_widget(Form.typeService) }}</td>
+                </tr>
+                <tr>
+                    <td>Description :</td>
+                    <td>{{ form_widget(Form.description) }}</td>
+                </tr>
+                <tr>
+                    <td>Categorie :</td>
+                    <td>{{ form_widget(Form.idCategorie) }}</td>
+                </tr>
+            </table>
+            <br/>
+            <input type="submit" value="Mettre à jour"/>
+            {{ form_rest(Form) }}
+        </form>
+
+{% endblock %}
+
+

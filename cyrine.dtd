@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+    TODO define vocabulary identification
+    PUBLIC ID: -//vendor//vocabulary//EN
+    SYSTEM ID: http://server/path/cyrine.dtd
+
+-->
+
+<!--
+    An example how to use this DTD from your XML document:
+
+    <?xml version="1.0"?>
+
+    <!DOCTYPE jasperReport SYSTEM "cyrine.dtd">
+
+    <jasperReport>
+    ...
+    </jasperReport>
+-->
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT jasperReport (summary|pageFooter|columnFooter|detail|columnHeader|pageHeader|title|background|group|field|queryString|style)*>
+<!ATTLIST jasperReport
+    uuid CDATA #IMPLIED
+    bottomMargin CDATA #IMPLIED
+    name CDATA #IMPLIED
+    language CDATA #IMPLIED
+    pageWidth CDATA #IMPLIED
+    pageHeight CDATA #IMPLIED
+    orientation CDATA #IMPLIED
+    columnWidth CDATA #IMPLIED
+    leftMargin CDATA #IMPLIED
+    rightMargin CDATA #IMPLIED
+    topMargin CDATA #IMPLIED
+    xsi:schemaLocation CDATA #IMPLIED
+    xmlns CDATA #IMPLIED
+    xmlns:xsi CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT style (conditionalStyle)*>
+<!ATTLIST style
+    backcolor CDATA #IMPLIED
+    mode CDATA #IMPLIED
+    forecolor CDATA #IMPLIED
+    pdfFontName CDATA #IMPLIED
+    isBold CDATA #IMPLIED
+    fontSize CDATA #IMPLIED
+    fontName CDATA #IMPLIED
+    name CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT conditionalStyle (style|conditionExpression)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT conditionExpression (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT queryString (#PCDATA)>
+<!ATTLIST queryString
+    language CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT field EMPTY>
+<!ATTLIST field
+    class CDATA #IMPLIED
+    name CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT group (groupFooter|groupHeader|groupExpression)*>
+<!ATTLIST group
+    name CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT groupExpression (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT groupHeader (band)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT band (line|staticText|image|textField|frame)*>
+<!ATTLIST band
+    splitType CDATA #IMPLIED
+    height CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT frame (textField|rectangle|reportElement)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT reportElement EMPTY>
+<!ATTLIST reportElement
+    positionType CDATA #IMPLIED
+    style CDATA #IMPLIED
+    backcolor CDATA #IMPLIED
+    forecolor CDATA #IMPLIED
+    height CDATA #IMPLIED
+    width CDATA #IMPLIED
+    y CDATA #IMPLIED
+    x CDATA #IMPLIED
+    mode CDATA #IMPLIED
+    uuid CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT rectangle (graphicElement|reportElement)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT graphicElement (pen)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT pen EMPTY>
+<!ATTLIST pen
+    lineColor CDATA #IMPLIED
+    lineWidth CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT textField (textFieldExpression|textElement|reportElement)*>
+<!ATTLIST textField
+    pattern CDATA #IMPLIED
+    evaluationTime CDATA #IMPLIED
+    isStretchWithOverflow CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT textElement (font)*>
+<!ATTLIST textElement
+    textAlignment CDATA #IMPLIED
+    verticalAlignment CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT font EMPTY>
+<!ATTLIST font
+    fontName CDATA #IMPLIED
+    pdfFontName CDATA #IMPLIED
+    size CDATA #IMPLIED
+    isBold CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT textFieldExpression (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT groupFooter (band)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT background (band)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT title (band)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT image (imageExpression|reportElement)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT imageExpression (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT staticText (text|textElement|reportElement)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT text (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT pageHeader (band)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT columnHeader (band)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT line (graphicElement|reportElement)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT detail (band)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT columnFooter (band)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT pageFooter (band)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT summary (band)*>

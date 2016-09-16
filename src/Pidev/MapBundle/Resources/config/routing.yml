@@ -1,0 +1,8 @@
+pidev_map_homepage:
+    pattern:  /map
+    defaults: { _controller: PidevMapBundle:Default:index }
+
+
+pidev_map_map:
+    pattern:  /mapdynamique
+    defaults: { _controller: PidevMapBundle:Default:MapNadine }

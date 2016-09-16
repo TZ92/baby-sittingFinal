@@ -1,0 +1,39 @@
+        <h3>Liste Des Baby Sitter </h3>
+<table border="1" >
+    <tr>
+        <th>Cin</th>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Sexe</th>
+        <th>Ville</th>
+        <th>Adresse</th>
+        <th>Age</th>
+        <th>Numero de Telephone</th>
+        <th>Mail</th>
+        <th>Niveau</th>
+        <th>Nombre de Mission</th>
+        <th>Nombre D'enfants Garder</th>
+        <th>Distance Maximale</th>
+        <th>Description</th>
+        <th>Tarif par Heure</th>
+        <th>Note</th>
+        
+      
+      
+    </tr>
+    {#
+    {% for b in baby %}
+        <tr>
+            <td>{{l.libelle}}</td>
+            <td>{{l.dateAjout|date('d/m/Y')}}</td>
+            <td>{{l.quantite}}</td>
+            <td>{{l.prixlot}}</td>
+            <td><a href="{{path("deleteLot",{'id':l.id})}}"> Suprimer </a></td>
+            <td><a href="{{path("updateLot",{'id':l.id})}}"> Modifier </a></td>
+            <td><a href="{{path("ajoutp",{'id':l.id})}}"> ajouter </a></td>
+            <td><a href="{{path("calcule")}}"> calculer </a></td>
+            
+        </tr>
+        
+    {% endfor %}#}
+</table>

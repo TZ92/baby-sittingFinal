@@ -1,0 +1,85 @@
+{% extends "PidevbackBundle::layout.html.twig" %} 
+{% block body %}
+    <h1>Liste Des Parents</h1>
+       
+    <table class="table table-hover">
+        <tbody>
+            <tr>
+                <th>Cin</th>
+                <td>{{ entity.cinParent }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ entity.nomParent }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ entity.prenomParent }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{ entity.villeParent }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ entity.adresseParent }}</td>
+            </tr>
+            <tr>
+                <th>Numero de telphone</th>
+                <td>{{ entity.numtelParent }}</td>
+            </tr>
+            <tr>
+                <th>E-mail</th>
+                <td>{{ entity.mailParent }}</td>
+            </tr>
+            <tr>
+                <th>Nombre d'enfant(s)</th>
+                <td>{{ entity.nbEnfant }}</td>
+            </tr>
+            <tr>
+                <th>Infomation sur votre enfant(s)</th>
+                <td>{{ entity.infoEnfant }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ entity.description }}</td>
+            </tr>
+            <tr>
+                <th>Date inscription </th>
+                <td>{{ entity.dateInscri|date('d/m/Y') }}</td>
+            </tr>
+            <tr>
+                <th>Date de dernier mise a jour</th>
+                <td>{{ entity.dateMaj|date('d/m/Y') }}</td>
+            </tr>
+        </tbody>
+    </table>
+            <table>
+    <tr>
+        <td>
+           &emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;
+        </td>
+        <td>
+           &emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;
+        </td>
+        <td>
+           &emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;
+        </td>
+        <td>
+           &emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;
+        </td>
+        <td>
+           &emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;
+        </td>
+        <td>
+           &emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;
+        </td>
+        <td>
+        <a class="btn btn-default"  role="btn"  href="{{path('parents_update', {'id': entity.idParent})}}">
+            Edit
+        </a>
+        <input type="submit" value="Supprimer" class="btn btn-primary">
+    </td>
+</tr>
+            </table>
+{% endblock %}

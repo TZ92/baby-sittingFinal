@@ -1,0 +1,43 @@
+{% extends "PidevbackBundle::layout.html.twig" %} 
+
+{% block title %}PidevbackBundle:Administrateur:ajout{% endblock %}
+
+{% block body %}
+        <h1>Ajout d'une garderie</h1>
+        <table class="table-hover">
+            <form class="form-horizontal" method="POST" action="">
+                <tr>
+                    <td>Nom de la garderie :</td>
+                    <td><input type="text" name="nom"/></td>
+                </tr>
+                <tr>
+                    <td>Adresse de la garderie :</td>
+                    <td><input type="text" name="adresse"/></td>
+                </tr>
+                <tr>
+                    <td>Ville :</td>
+                    <td><input type="text" name="ville"/></td>
+                </tr>
+                <tr>
+                    <td>Num Tél :</td>
+                    <td><input type="text" name="numero"/></td>
+                </tr>
+                <tr>
+                    <td>E-mail :</td>
+                    <td><input type="text" name="mail"/></td>
+                </tr>
+                <tr>
+                    <td>Capacité :</td>
+                    <td><input type="text" name="capacite"/></td>
+                </tr>
+                <tr>
+                    <td>Description :</td>
+                    <td><textarea name="description" rows="10" cols="15" id="description"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input class="btn btn-primary" type="submit" value="Envoyer"/></td>
+                </tr>
+            </form>
+        </table>
+  {% endblock %}

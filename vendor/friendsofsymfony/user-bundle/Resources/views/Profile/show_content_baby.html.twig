@@ -1,0 +1,90 @@
+{% extends "PidevFrontBundle::layout.html.twig" %} 
+       {% block body %}
+{% trans_default_domain 'FOSUserBundle' %}
+ <div>
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                 
+                </a>
+            {% else %}
+                <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+            {% endif %}
+        </div>
+<div class="fos_user_user_show">
+    
+   
+            <table class="table table-hover">
+        <tbody>
+            <tr>
+                <th>{{ 'profile.show.username'|trans }}</th>
+                <td> {{ user.username }}</td>
+            </tr>
+            <tr>
+    <th>{{ 'profile.show.email'|trans }}</th>
+    <td>{{ user.email }}</td>
+            </tr>
+            <tr>
+                <th>cin</th>
+                <td>{{baby.cinBabysitter}}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{baby.nomBabysitter}}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{baby.prenomBabysitter}}</td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td>{{baby.ageBabysitter }}</td>
+            </tr>
+            <tr>
+                <th>Sexe</th>
+                <td>{{baby.sexeBabysitter }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{baby.ville }}</td>
+            </tr>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{baby.adresseBabysitter }}</td>
+            </tr>
+            <tr>
+                <th>Numero de Telephne </th>
+                <td>{{baby.numtelBabysitter }}</td>
+            </tr>
+            <tr>
+                <th>Niveau </th>
+                <td>{{baby.niveauBabysitter }}</td>
+            </tr>
+            <tr>
+                <th>Nombre de Mission </th>
+                <td>{{baby.nbMissionBabysitter }}</td>
+            </tr>
+            <tr>
+                <th>Nombre D'enfant(s) garder </th>
+                <td>{{baby.nbEnfantBabysitter }}</td>
+            </tr>
+            <tr>
+                <th>Distance Maximale</th>
+                <td>{{baby.distancemaxBabysitter }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{baby.descriptionBabysitter }}</td>
+            </tr>
+            <tr>
+                <th>Tarif par heur</th>
+                <td>{{baby.tarifHeur }}</td>
+            </tr>
+            <tr>
+                <th>Note</th>
+                <td>{{baby.note }}</td>
+            </tr>
+        </tbody>
+    </table>
+            
+</div>
+       {% endblock %}     

@@ -1,0 +1,32 @@
+
+
+
+
+        <h1>Formulaire de recherche</h1>
+
+        <form action="" method="post">
+            Service: <input type="text" name="typeService"/>
+            <input type="submit" value="Rechercher"/>
+        </form>
+
+        <h1>Liste des services</h1>
+        <table border="1">
+            <tr>
+                
+                <th>Service</th>
+                <th>Description</th>
+                <th>Catégorie</th>
+                <th>Choisir</th>
+                
+            </tr>
+            {% for s in Services %}
+                <tr>
+                   
+                    <td>{{s.typeService}}</td>
+                    <td>{{s.description}}</td>
+                    <td>{{s.idCategorie.nomCategorie}}</td>
+                    
+                    <td><a href="{{path("pidevFront_choisir",{ 'id':s.id})}}">Choisir service</a></td>
+                </tr>   
+            {% endfor %}
+        </table>

@@ -1,0 +1,7 @@
+parameters:
+#    pidev_graphe.example.class: Pidev\GrapheBundle\Example
+
+services:
+#    pidev_graphe.example:
+#        class: %pidev_graphe.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

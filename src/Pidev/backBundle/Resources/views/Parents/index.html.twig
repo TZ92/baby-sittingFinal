@@ -1,0 +1,35 @@
+{% extends "PidevbackBundle::layout.html.twig" %} 
+{% block body %}
+    <h1>Parents list</h1>
+    <a style="color:red;" href="{{path('generateParent')}}">Generer un  pdf </a>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Cin</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Numero de telephone</th>
+                <th>E-mail</th>
+                <th>Nembre d'enfant(s)</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td>{{ entity.cinParent }}</td>
+                <td>{{ entity.nomParent }}</td>
+                <td>{{ entity.prenomParent }}</td>
+                <td>{{ entity.numtelParent }}</td>
+                <td>{{ entity.mailParent }}</td>
+                <td>{{ entity.nbEnfant }}</td>
+                <td>
+                        <a class="btn btn-default"  role="btn" href="{{ path('parents_show', { 'id': entity.idParent }) }}">Voir en details</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+       
+    {% endblock %}

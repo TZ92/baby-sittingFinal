@@ -1,0 +1,297 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+    TODO define vocabulary identification
+    PUBLIC ID: -//vendor//vocabulary//EN
+    SYSTEM ID: http://server/path/report2.dtd
+
+-->
+
+<!--
+    An example how to use this DTD from your XML document:
+
+    <?xml version="1.0"?>
+
+    <!DOCTYPE jasperReport SYSTEM "report2.dtd">
+
+    <jasperReport>
+    ...
+    </jasperReport>
+-->
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT jasperReport (summary|pageFooter|columnFooter|detail|columnHeader|pageHeader|title|background|group|subDataset|style|property)*>
+<!ATTLIST jasperReport
+    uuid CDATA #IMPLIED
+    bottomMargin CDATA #IMPLIED
+    name CDATA #IMPLIED
+    language CDATA #IMPLIED
+    pageWidth CDATA #IMPLIED
+    pageHeight CDATA #IMPLIED
+    orientation CDATA #IMPLIED
+    columnWidth CDATA #IMPLIED
+    leftMargin CDATA #IMPLIED
+    rightMargin CDATA #IMPLIED
+    topMargin CDATA #IMPLIED
+    xsi:schemaLocation CDATA #IMPLIED
+    xmlns CDATA #IMPLIED
+    xmlns:xsi CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT property EMPTY>
+<!ATTLIST property
+    value CDATA #IMPLIED
+    name CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT style (conditionalStyle)*>
+<!ATTLIST style
+    backcolor CDATA #IMPLIED
+    mode CDATA #IMPLIED
+    pdfFontName CDATA #IMPLIED
+    isBold CDATA #IMPLIED
+    fontSize CDATA #IMPLIED
+    fontName CDATA #IMPLIED
+    forecolor CDATA #IMPLIED
+    name CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT conditionalStyle (style|conditionExpression)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT conditionExpression (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT subDataset EMPTY>
+<!ATTLIST subDataset
+    uuid CDATA #IMPLIED
+    name CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT group (groupFooter|groupHeader|groupExpression)*>
+<!ATTLIST group
+    name CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT groupExpression (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT groupHeader (band)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT band (line|staticText|image|pie3DChart|textField|frame)*>
+<!ATTLIST band
+    splitType CDATA #IMPLIED
+    height CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT frame (staticText|textField|reportElement)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT reportElement (printWhenExpression)*>
+<!ATTLIST reportElement
+    positionType CDATA #IMPLIED
+    isPrintRepeatedValues CDATA #IMPLIED
+    style CDATA #IMPLIED
+    backcolor CDATA #IMPLIED
+    forecolor CDATA #IMPLIED
+    height CDATA #IMPLIED
+    width CDATA #IMPLIED
+    y CDATA #IMPLIED
+    x CDATA #IMPLIED
+    mode CDATA #IMPLIED
+    uuid CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT textField (textFieldExpression|textElement|reportElement)*>
+<!ATTLIST textField
+    pattern CDATA #IMPLIED
+    evaluationTime CDATA #IMPLIED
+    isBlankWhenNull CDATA #IMPLIED
+    isStretchWithOverflow CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT textElement (font)*>
+<!ATTLIST textElement
+    verticalAlignment CDATA #IMPLIED
+    textAlignment CDATA #IMPLIED
+    markup CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT font EMPTY>
+<!ATTLIST font
+    size CDATA #IMPLIED
+    pdfFontName CDATA #IMPLIED
+    isBold CDATA #IMPLIED
+    fontName CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT textFieldExpression (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT groupFooter (band)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT background (band)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT pie3DChart (pie3DPlot|pieDataset|chart)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT chart (chartLegend|chartSubtitle|chartTitle|reportElement)*>
+<!ATTLIST chart
+    evaluationTime CDATA #IMPLIED
+    isShowLegend CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT chartTitle EMPTY>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT chartSubtitle EMPTY>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT chartLegend EMPTY>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT pieDataset (valueExpression|keyExpression|dataset)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT dataset (datasetRun)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT datasetRun (dataSourceExpression)*>
+<!ATTLIST datasetRun
+    uuid CDATA #IMPLIED
+    subDataset CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT dataSourceExpression (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT keyExpression (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT valueExpression (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT pie3DPlot (itemLabel|plot)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT plot (seriesColor)*>
+<!ATTLIST plot
+    foregroundAlpha CDATA #IMPLIED
+    backgroundAlpha CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT seriesColor EMPTY>
+<!ATTLIST seriesColor
+    color CDATA #IMPLIED
+    seriesOrder CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT itemLabel EMPTY>
+<!ATTLIST itemLabel
+    backgroundColor CDATA #IMPLIED
+    color CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT image (imageExpression|reportElement)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT printWhenExpression (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT imageExpression (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT staticText (text|textElement|box|reportElement)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT box (rightPen|bottomPen|leftPen|topPen|pen)*>
+<!ATTLIST box
+    rightPadding CDATA #IMPLIED
+    bottomPadding CDATA #IMPLIED
+    leftPadding CDATA #IMPLIED
+    topPadding CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT pen EMPTY>
+<!ATTLIST pen
+    lineStyle CDATA #IMPLIED
+    lineColor CDATA #IMPLIED
+    lineWidth CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT topPen EMPTY>
+<!ATTLIST topPen
+    lineColor CDATA #IMPLIED
+    lineWidth CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT leftPen EMPTY>
+<!ATTLIST leftPen
+    lineColor CDATA #IMPLIED
+    lineWidth CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT bottomPen EMPTY>
+<!ATTLIST bottomPen
+    lineColor CDATA #IMPLIED
+    lineWidth CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT rightPen EMPTY>
+<!ATTLIST rightPen
+    lineColor CDATA #IMPLIED
+    lineWidth CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT text (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT line (graphicElement|reportElement)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT graphicElement (pen)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT title (band)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT pageHeader (band)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT columnHeader (band)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT detail (band)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT columnFooter (band)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT pageFooter (band)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT summary (band)*>

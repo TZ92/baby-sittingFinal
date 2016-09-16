@@ -1,0 +1,8 @@
+pidevback:
+    resource: "@PidevbackBundle/Resources/config/routing.yml"
+    prefix:   /
+
+pidev_front:
+    resource: "@PidevFrontBundle/Resources/config/routing.yml"
+    prefix:   /
+

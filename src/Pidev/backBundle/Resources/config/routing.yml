@@ -1,0 +1,139 @@
+homeadmin:
+    pattern:  /home
+    defaults: { _controller: PidevbackBundle:Reclamation:note }
+
+ajoutAdmin:
+    pattern: /ajout
+    defaults: { _controller: PidevbackBundle:Administrateur:ajout }
+
+updatAdmin:
+    pattern: /updat
+    defaults: { _controller: PidevbackBundle:Administrateur:updat }
+
+deleteAdmin:
+    pattern: /delete
+    defaults: { _controller: PidevbackBundle:Administrateur:delete }
+
+listeAdmin:
+    pattern: /Liste
+    defaults: { _controller: PidevbackBundle:Administrateur:Liste }
+
+rechercheAdmin:
+    pattern: /recherche
+    defaults: { _controller: PidevbackBundle:Administrateur:recherche }
+
+ajoutBaby:
+    pattern: /baby/ajoutb
+    defaults: { _controller: PidevbackBundle:Babysitter:ajout }
+
+updateBaby:
+    pattern: /updateb{id}
+    defaults: { _controller: PidevbackBundle:Babysitter:update }
+
+deleteBaby:
+    pattern: /deleteb/{id}
+    defaults: { _controller: PidevbackBundle:Babysitter:delete }
+
+listeBaby:
+    pattern: /admin/listeb
+    defaults: { _controller: PidevbackBundle:Babysitter:liste }
+showBaby:
+    pattern: /admin/show/{id}
+    defaults: { _controller: PidevbackBundle:Babysitter:show }
+
+rechercheBaby:
+    pattern: /rechb
+    defaults: { _controller: PidevbackBundle:Babysitter:recherche }
+profilBaby:
+    pattern: /admin/profil
+    defaults: { _controller: PidevbackBundle:Babysitter:profile }
+generateBaby:
+    pattern: /generateBaby
+    defaults: { _controller: PidevbackBundle:Babysitter:generateBaby }
+ajoutparent:
+    pattern: /ajoutp
+    defaults: { _controller: PidevbackBundle:Parents:index }
+    
+parents_show:
+    pattern: /showp/{id}
+    defaults: { _controller: PidevbackBundle:Parents:show }
+    
+parents_update:
+    pattern: /editp/{id}
+    defaults: { _controller: PidevbackBundle:Parents:edit }
+parents_delete:
+    pattern: /delete/{id}
+    defaults: { _controller: PidevbackBundle:Parents:delete }
+parents_new:
+    pattern: /new
+    defaults: { _controller: PidevbackBundle:Parents:new }
+generateParent:
+    pattern: /generateParent
+    defaults: { _controller: PidevbackBundle:Parents:generateParent }
+    
+listeReclamation:
+    pattern: /listrec
+    defaults: { _controller: PidevbackBundle:Reclamation:list }
+
+deleteReclamation:
+    pattern: /deleterec/{idreclamation}
+    defaults: { _controller: PidevbackBundle:Reclamation:delete }   
+pidevback_ajout:
+    pattern:  /ajoutService
+    defaults: { _controller: PidevbackBundle:Service:addService }
+    
+pidevback_delete:
+    pattern:  /supprimerService{id}
+    defaults: { _controller: PidevbackBundle:Service:deleteService }
+    
+pidevback_update:
+    pattern:  /updateService{id}
+    defaults: { _controller: PidevbackBundle:Service:updateService }
+    
+pidevback_listCategories:
+    pattern:  /listeCategories
+    defaults: { _controller: PidevbackBundle:Categorie:listCategories }
+    
+pidevback_ajoutCategorie:
+    pattern:  /ajoutCategorie
+    defaults: { _controller: PidevbackBundle:Categorie:addCategorie }
+    
+pidevback_deleteCategorie:
+    pattern:  /supprimerCategorie{id}
+    defaults: { _controller: PidevbackBundle:Categorie:deleteCategorie }
+    
+pidevback_updateCategorie:
+    pattern:  /updateCategorie{id}
+    defaults: { _controller: PidevbackBundle:Categorie:updateCategorie }
+pidevback_list:
+    pattern:  /listeServices
+    defaults: { _controller: PidevbackBundle:Service:listServices }
+listEvenement:
+    pattern:  /listeven
+    defaults: { _controller: PidevbackBundle:Evenement:list }
+ajoutEvenement:
+    pattern:  /addeven
+    defaults: { _controller: PidevbackBundle:Evenement:ajout }
+
+deleteEvenement:
+    pattern:  /deleteven/{idevenement}
+    defaults: { _controller: PidevbackBundle:Evenement:delete }
+    
+updateEvenement:
+    pattern:  /update/{idevenement}
+    defaults: { _controller: PidevbackBundle:Evenement:update }
+ajoutGarderie:
+    pattern:  /addgard
+    defaults: { _controller: PidevbackBundle:Garderie:ajout }
+listGarderie:
+    pattern:  /listegard
+    defaults: { _controller: PidevbackBundle:Garderie:list }
+deleteGarderie:
+    pattern:  /deletegard/{idgarderie}
+    defaults: { _controller: PidevbackBundle:Garderie:delete }
+ajoutImage:
+    pattern:  /ajoutimage
+    defaults: { _controller: PidevbackBundle:Evenement:upload }
+updateGarderie:
+    pattern:  /updategard/{idgarderie}
+    defaults: { _controller: PidevbackBundle:Garderie:update }

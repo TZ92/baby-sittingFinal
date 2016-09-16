@@ -1,0 +1,63 @@
+pidevback_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: PidevbackBundle:Default:index }
+
+ajoutAdmin:
+    pattern: /ajout
+    defaults: { _controller: PidevbackBundle:Administrateur:ajout }
+
+updatAdmin:
+    pattern: /updat
+    defaults: { _controller: PidevbackBundle:Administrateur:updat }
+
+deleteAdmin:
+    pattern: /delete
+    defaults: { _controller: PidevbackBundle:Administrateur:delete }
+
+listeAdmin:
+    pattern: /Liste
+    defaults: { _controller: PidevbackBundle:Administrateur:Liste }
+
+rechercheAdmin:
+    pattern: /recherche
+    defaults: { _controller: PidevbackBundle:Administrateur:recherche }
+
+ajoutBaby:
+    pattern: /ajout
+    defaults: { _controller: PidevbackBundle:Babysitter:ajout }
+
+updateBaby:
+    pattern: /update
+    defaults: { _controller: PidevbackBundle:Babysitter:update }
+
+deleteBaby:
+    pattern: /delete
+    defaults: { _controller: PidevbackBundle:Babysitter:delete }
+
+listeBaby:
+    pattern: /liste
+    defaults: { _controller: PidevbackBundle:Babysitter:liste }
+
+rechercheBaby:
+    pattern: /recherche
+    defaults: { _controller: PidevbackBundle:Babysitter:recherche }
+
+ajout:
+    pattern: /ajout
+    defaults: { _controller: PidevbackBundle:Parent:ajout }
+
+update:
+    pattern: /update
+    defaults: { _controller: PidevbackBundle:Parent:update }
+
+delete:
+    pattern: /delete
+    defaults: { _controller: PidevbackBundle:Parent:delete }
+
+liste:
+    pattern: /liste
+    defaults: { _controller: PidevbackBundle:Parent:liste }
+
+recherche:
+    pattern: /recherche
+    defaults: { _controller: PidevbackBundle:Parent:recherche }

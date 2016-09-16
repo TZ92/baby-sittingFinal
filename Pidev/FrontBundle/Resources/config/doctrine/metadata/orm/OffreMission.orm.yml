@@ -1,0 +1,53 @@
+OffreMission:
+    type: entity
+    table: offre_mission
+    fields:
+        idOffre:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            column: id_offre
+            generator:
+                strategy: IDENTITY
+        lieuMission:
+            type: string
+            length: 25
+            fixed: false
+            nullable: false
+            column: lieu_mission
+        dateDebut:
+            type: date
+            nullable: false
+            column: date_debut
+        dateFin:
+            type: date
+            nullable: false
+            column: date_fin
+        horaireGarde:
+            type: string
+            length: 1000
+            fixed: false
+            nullable: false
+            column: horaire_garde
+        nombreEnfant:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: nombre_enfant
+        sexe:
+            type: string
+            length: 20
+            fixed: false
+            nullable: false
+        idParent:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: id_parent
+        idService:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: id_service
+    lifecycleCallbacks: {  }

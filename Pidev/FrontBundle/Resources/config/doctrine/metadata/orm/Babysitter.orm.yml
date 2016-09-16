@@ -1,0 +1,113 @@
+Babysitter:
+    type: entity
+    table: babysitter
+    fields:
+        idBabysitter:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            column: id_babysitter
+            generator:
+                strategy: IDENTITY
+        cinBabysitter:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: cin_babysitter
+        nomBabysitter:
+            type: string
+            length: 30
+            fixed: false
+            nullable: true
+            column: nom_babysitter
+        prenomBabysitter:
+            type: string
+            length: 30
+            fixed: false
+            nullable: true
+            column: prenom_babysitter
+        sexeBabysitter:
+            type: string
+            length: 10
+            fixed: false
+            nullable: false
+            column: sexe_babysitter
+        ville:
+            type: string
+            length: 20
+            fixed: false
+            nullable: false
+        adresseBabysitter:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+            column: adresse_babysitter
+        ageBabysitter:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: age_babysitter
+        numtelBabysitter:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: numtel_babysitter
+        mailBabysitter:
+            type: string
+            length: 30
+            fixed: false
+            nullable: true
+            column: mail_babysitter
+        imageBabysitter:
+            type: blob
+            nullable: true
+            column: image_babysitter
+        mpBabysitter:
+            type: string
+            length: 30
+            fixed: false
+            nullable: true
+            column: mp_babysitter
+        niveauBabysitter:
+            type: string
+            length: 20
+            fixed: false
+            nullable: true
+            column: niveau_babysitter
+        nbMissionBabysitter:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: nb_mission_babysitter
+        nbEnfantBabysitter:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: nb_enfant_babysitter
+        distancemaxBabysitter:
+            type: string
+            length: 11
+            fixed: false
+            nullable: true
+            column: distancemax_babysitter
+        descriptionBabysitter:
+            type: string
+            length: 2000
+            fixed: false
+            nullable: true
+            column: description_babysitter
+        tarifHeur:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: tarif_heur
+        enable:
+            type: boolean
+            nullable: true
+        note:
+            type: integer
+            unsigned: false
+            nullable: false
+    lifecycleCallbacks: {  }

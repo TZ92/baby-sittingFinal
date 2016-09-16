@@ -1,0 +1,57 @@
+
+<h1>Welcome to the Babysitter:recherche page</h1>
+            <h3>Rechercher </h3>
+<form  method="POST" action="" >
+    cin : <input type="text" name="cin"/>
+    <input type="submit" value="Chercher"/>
+</form>
+<table border="1" >
+    <tr>
+        <th>Cin</th>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Sexe</th>
+        <th>Ville</th>
+        <th>Adresse</th>
+        <th>Age</th>
+        <th>Numero de Telephone</th>
+        <th>Mail</th>
+        <th>Niveau</th>
+        <th>Nombre de Mission</th>
+        <th>Nombre D'enfants Garder</th>
+        <th>Distance Maximale</th>
+        <th>Description</th>
+        <th>Tarif par Heure</th>
+        <th>Note</th>
+         <th>Modifier</th>
+        <th>Supprimer</th>
+      
+      
+    </tr>
+    
+    {% for b in baby %}
+        <tr>
+            <td>{{b.cinBabysitter}}</td>
+            <td>{{b.nomBabysitter}}</td>
+            <td>{{b.prenomBabysitter}}</td>
+            <td>{{b.sexeBabysitter}}</td>
+            <td>{{b.ville}}</td>
+            <td>{{b.adresseBabysitter}}</td>
+            <td>{{b.ageBabysitter}}</td>
+            <td>{{b.numtelBabysitter}}</td>
+            <td>{{b.mailBabysitter}}</td>
+            <td>{{b.niveauBabysitter}}</td>
+            <td>{{b.nbMissionBabysitter}}</td>
+            <td>{{b.nbEnfantBabysitter}}</td>
+            <td>{{b.distancemaxBabysitter}}</td>
+            <td>{{b.descriptionBabysitter}}</td>
+            <td>{{b.tarifHeur}}</td>
+            <td>{{b.note}}</td>
+            
+            <td><a href="{{path("updateBaby",{'id':b.idBabysitter})}}"> Modifier </a></td>
+            <td><a href="{{path("deleteBaby",{'id':b.idBabysitter})}}"> Supprimer </a></td>
+            
+        </tr>
+        
+    {% endfor %}
+</table>

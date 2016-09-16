@@ -1,0 +1,10 @@
+pidev_graphe_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: PidevGrapheBundle:Default:index }
+_graphePie:
+    path:     /pie
+    defaults: { _controller: PidevGrapheBundle:Graphe:chartPie }
+
+_grapheHistogramme:
+    path:     /histogramme
+    defaults: { _controller: PidevGrapheBundle:Graphe:chartHistogramme }

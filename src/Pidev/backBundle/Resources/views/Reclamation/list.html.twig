@@ -1,0 +1,73 @@
+{% extends "PidevbackBundle::layout.html.twig" %} 
+{% block body %}
+<h1> Formulaire de recherche </h1>
+<form class="form-horizontal" method="POST" action="" >
+    <div class="controls">
+    <label class="control-label" for="inputWarning">Type :</label>
+    &emsp;
+    <input type="text" name="type" id="inputWarning"/>
+    &emsp;
+    <input type="submit" value="Chercher" class="btn btn-primary">
+</form>
+<h1> Liste des Reclamations </h1>
+<table class="table table-hover">
+    <tr>
+        <th>idreclamation</th>
+        <th>sujetreclamation</th>
+        <th>datereclamation</th>
+        <th>email</th>
+        <th>type</th>
+        <th>idParent </th>
+        <th>codePostal</th>
+        <th>message</th>
+        <th></th>
+    </tr>
+    
+    {% for m in Reclamation %}
+        
+        <tr>
+            <td>{{m.idreclamation}}</td>
+            <td>{{m.sujetreclamation}}</td>
+            <td>{{m.datereclamation}}</td>
+            <td>{{m.email}}</td>
+            <td>{{m.type}}</td>
+            <td>{{m.idParent.nomParent}}</td>
+            <td>{{m.codePostal}}</td>
+            <td>{{m.message}}</td>
+            <td><a class="btn btn-default"  role="btn" href="{{path("deleteReclamation",{'idreclamation':m.idreclamation})}}"> Suprimer </a></td>
+       
+        </tr>
+        
+    {% endfor %}
+     
+</table>
+      
+
+{% endblock %}
+                             {% block rec%}
+<table class="table table-hover">
+    <tr>
+        
+        <th>reclamation</th>
+        <th>Parent </th>
+
+        <th></th>
+    </tr>
+    
+    {% for m in Reclamation %}
+        
+        <tr>
+ 
+            <td>{{m.sujetreclamation}}</td>
+            
+            <td>{{m.idParent.nomParent}}</td>
+ 
+           
+       
+        </tr>
+        
+    {% endfor %}
+     
+</table>
+    {% endblock %}
+

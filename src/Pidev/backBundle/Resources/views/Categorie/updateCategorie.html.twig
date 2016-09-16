@@ -1,0 +1,13 @@
+{% extends "PidevbackBundle::layout.html.twig" %} 
+       {% block body %}
+
+        {# La partie du code sans le template #}
+        <h1>Mise a jour d'une catégorie</h1>
+        <form action="" method="post">
+            {{ form_widget(Form) }}
+            <input class="btn btn-primary" type="submit" value="Mettre à jour"/>
+        </form>
+       {% endblock %}
+
+
+

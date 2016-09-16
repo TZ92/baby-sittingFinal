@@ -1,0 +1,50 @@
+Reclamation:
+    type: entity
+    table: reclamation
+    fields:
+        idreclamation:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            column: idReclamation
+            generator:
+                strategy: IDENTITY
+        sujetreclamation:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+            column: sujetReclamation
+        datereclamation:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+            column: dateReclamation
+        email:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+        type:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+        idParent:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: id_parent
+        codePostal:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: code_postal
+        message:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,39 @@
+       {% extends "PidevFrontBundle::layout.html.twig" %} 
+       {% block body %}
+            <h2>Liste Des Baby Sitter </h2>
+  <p>The .table-hover class enables a hover state on table rows:</p>            
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Cin</th>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Age</th>
+        <th>Numero de Telephone</th>
+        <th>Mail</th>
+        <th>Tarif par Heure</th>
+         <th></th>
+      </tr>
+    </thead>
+    <tbody>
+          </tr>
+    
+    {% for b in baby %}
+        <tr>
+            <td>{{b.cinBabysitter}}</td>
+            <td>{{b.nomBabysitter}}</td>
+            <td>{{b.prenomBabysitter}}</td>
+            <td>{{b.ageBabysitter}}</td>
+            <td>{{b.numtelBabysitter}}</td>
+            <td>{{b.mailBabysitter}}</td>
+            <td>{{b.note}}</td>
+            
+            <td><a class="btn btn-default"  role="btn" href="{{path("showBaby",{'id':b.idBabysitter})}}"> afficher detail </a></td>
+            
+        </tr>
+        
+    {% endfor %}
+     
+    </tbody>
+  </table>
+{% endblock  %}

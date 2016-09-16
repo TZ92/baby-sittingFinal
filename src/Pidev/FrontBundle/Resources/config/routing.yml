@@ -1,0 +1,63 @@
+pidev_front_homepage:
+    pattern:  /hello
+    defaults: { _controller: PidevFrontBundle:Default:index }
+    
+pidev_backBundle_List:
+    pattern:  /listOffre
+    defaults: { _controller: PidevFrontBundle:OffreMission:list }
+pidev_backBundle_generate:
+    pattern:  /generate
+    defaults: { _controller: PidevFrontBundle:OffreMission:generatePdf }
+
+pidev_backBundle_add:
+    pattern:  /addOffre
+    defaults: { _controller: PidevFrontBundle:OffreMission:ajout } 
+ 
+pidev_backBundle_delete:
+    pattern:  /deleteOffre/{id}
+    defaults: { _controller: PidevFrontBundle:OffreMission:delete }   
+  
+Update_Offre:
+    pattern:  /UpdateOffre/{id}
+    defaults: { _controller: PidevFrontBundle:OffreMission:update }   
+
+pidevFront_list:
+    pattern:  /listeServices
+    defaults: { _controller: PidevFrontBundle:Service:listServices }
+    
+pidevFront_choisir:
+    pattern:  /choisirFront{id}
+    defaults: { _controller: PidevFrontBundle:ServiceParent:choisirService }
+    
+pdf_Offre2:
+    pattern:  /pdf2/{name}
+    defaults: { _controller: PidevFrontBundle:OffreMission:hello } 
+
+my_image:
+    pattern:  /up2
+    defaults: { _controller: PidevFrontBundle:Image:upload } 
+
+my_image_route:
+    pattern:  /up/{id}
+    defaults: { _controller: PidevFrontBundle:Image:photo }
+list:
+    pattern:  /list
+    defaults: { _controller: PidevFrontBundle:Recherche:liste }
+rech:
+    pattern:  /rech
+    defaults: { _controller: PidevFrontBundle:Recherche:recherche }
+listeGarderie:
+    pattern:  /listegarderie
+    defaults: { _controller: PidevFrontBundle:Garderie:list }
+    
+profilBabyFront:
+    pattern: /baby/profil
+    defaults: { _controller: PidevFrontBundle:Babysitter:profile }
+ajoutBabyFront:
+    pattern: /baby/ajoutbaby
+    defaults: { _controller: PidevFrontBundle:Babysitter:ajout }
+listeBabyFront:
+    pattern: /baby/listeb
+    defaults: { _controller: PidevFrontBundle:Babysitter:liste }
+
+

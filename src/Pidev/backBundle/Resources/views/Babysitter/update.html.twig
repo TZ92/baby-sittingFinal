@@ -1,0 +1,157 @@
+{% extends "PidevbackBundle::layout.html.twig" %} 
+
+{% block title %}Mette a Jour  D'un Baby Sitter {% endblock %}
+
+{% block body %}
+    <form class="form-horizontal" method="post" {{form_enctype(Form) }} >
+<table class="table table-hover">
+    
+    <tr>
+        <td>
+            <label class="control-label" for="inputWarning">Cin*</label>
+        </td>
+        <td>
+           {{ form_widget(Form.cinBabysitter)}}
+           {{ form_errors(Form.cinBabysitter)}}
+        </td>
+   
+    <tr>
+     <tr>
+        <td>
+            <label class="control-label" for="inputWarning">Nom*</label>
+        </td>
+        <td>
+           {{ form_widget(Form.nomBabysitter)}}
+           {{ form_errors(Form.nomBabysitter)}}
+        </td>
+     </tr>
+     <tr>
+        <td>
+            <label class="control-label" for="inputWarning">Prenom*</label>
+        </td>
+        <td>
+           {{ form_widget(Form.prenomBabysitter)}}
+           {{ form_errors(Form.prenomBabysitter)}}
+        </td>
+     </tr>
+       <tr>
+        <td>
+            <label class="control-label" for="inputWarning">Age*</label>
+        </td>
+        <td>
+           {{ form_widget(Form.ageBabysitter)}}
+           {{ form_errors(Form.ageBabysitter)}}
+        </td>
+     </tr>
+     <tr>
+        <td>
+            <label class="control-label" for="inputWarning">Sexe*</label>
+        </td>
+        <td>
+           {{ form_widget(Form.sexeBabysitter)}}
+           {{ form_errors(Form.sexeBabysitter)}}
+        </td>
+     </tr>
+     <tr>
+        <td>
+            <label class="control-label" for="inputWarning">Ville*</label>
+        </td>
+        <td>
+           {{ form_widget(Form.ville)}}
+           {{ form_errors(Form.ville)}}
+        </td>
+     </tr>
+      <tr>
+        <td>
+            <label class="control-label" for="inputWarning">Adresse*</label>
+        </td>
+        <td>
+           {{ form_widget(Form.adresseBabysitter)}}
+           {{ form_errors(Form.adresseBabysitter)}}
+        </td>
+     </tr>
+     <tr>
+        <td>
+            <label class="control-label" for="inputWarning">Numero de Telephone*</label>
+        </td>
+        <td>
+           {{ form_widget(Form.numtelBabysitter)}}
+           {{ form_errors(Form.numtelBabysitter)}}
+        </td>
+     </tr>
+     <tr>
+        <td>
+            <label class="control-label" for="inputWarning">E-mail*</label>
+        </td>
+        <td>
+           {{ form_widget(Form.mailBabysitter)}}
+           {{ form_errors(Form.mailBabysitter)}}
+        </td>
+     </tr>
+      <tr>
+        <td>
+            <label class="control-label" for="inputWarning">Niveau*</label>
+        </td>
+        <td>
+           {{ form_widget(Form.niveauBabysitter)}}
+           {{ form_errors(Form.niveauBabysitter)}}
+        </td>
+     </tr>
+      <tr>
+        <td>
+            <label class="control-label" for="inputWarning">Nembre de missions*</label>
+        </td>
+        <td>
+           {{ form_widget(Form.nbMissionBabysitter)}}
+           {{ form_errors(Form.nbMissionBabysitter)}}
+        </td>
+     </tr>
+      <tr>
+        <td>
+            <label class="control-label" for="inputWarning">Nembre d'enfant(s) garder*</label>
+        </td>
+        <td>
+           {{ form_widget(Form.nbEnfantBabysitter)}}
+           {{ form_errors(Form.nbEnfantBabysitter)}}
+        </td>
+     </tr>
+        <tr>
+        <td>
+            <label class="control-label" for="inputWarning">Distance MAximale*</label>
+        </td>
+        <td>
+           {{ form_widget(Form.distancemaxBabysitter)}}
+           {{ form_errors(Form.distancemaxBabysitter)}}
+        </td>
+     </tr>
+       <tr>
+        <td>
+            <label class="control-label" for="inputWarning">Description*</label>
+        </td>
+        <td>
+           {{ form_widget(Form.descriptionBabysitter)}}
+           {{ form_errors(Form.descriptionBabysitter)}}
+        </td>
+     </tr>
+       <tr>
+        <td>
+            <label class="control-label" for="inputWarning">Tarif par Heur*</label>
+        </td>
+        <td>
+           {{ form_widget(Form.tarifHeur)}}
+           {{ form_errors(Form.tarifHeur)}}
+        </td>
+     </tr>
+    <tr>
+        <td></td>
+        <td>
+             <input type="submit" value="Valider" class="btn btn-primary"/>
+             <input type="reset" value="Annuler" class="btn" onclick="{{path("listeBaby")}}"/>
+        </td>
+    </tr>
+
+   
+</table>
+   {{form_rest(Form)}}     
+</form>
+{% endblock %}

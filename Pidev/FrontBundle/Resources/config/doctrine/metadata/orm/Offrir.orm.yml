@@ -1,0 +1,17 @@
+Offrir:
+    type: entity
+    table: offrir
+    fields:
+        idService:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            column: id_service
+        idBabysitter:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            column: id_babysitter
+    lifecycleCallbacks: {  }

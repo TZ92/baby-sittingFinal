@@ -1,0 +1,21 @@
+pidev_graphe:
+    resource: "@PidevGrapheBundle/Resources/config/routing.yml"
+    prefix:   /
+
+pidev_user:
+    resource: "@PidevUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+pidevback:
+    resource: "@PidevbackBundle/Resources/config/routing.yml"
+    prefix:   /back
+
+pidev_front:
+    resource: "@PidevFrontBundle/Resources/config/routing.yml"
+    prefix:   /front
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml" 
+pidev_map:
+    resource: "@PidevMapBundle/Resources/config/routing.yml"
+    prefix:   /map
+

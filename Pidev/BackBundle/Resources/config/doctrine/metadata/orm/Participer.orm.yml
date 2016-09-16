@@ -1,0 +1,17 @@
+Participer:
+    type: entity
+    table: participer
+    fields:
+        idParent:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            column: id_parent
+        idEvenement:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            column: id_evenement
+    lifecycleCallbacks: {  }

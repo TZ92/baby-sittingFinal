@@ -1,0 +1,58 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <header>
+            <aside style="width: 30%; position: relative; left: auto">
+                Babysitter <br>
+                1080 Lac 2 <br>
+                Tunis <br>
+            </aside>
+        </header> <br>
+    <center>
+        <table style="text-align: center; column-span: 20; border: 1px; width: 100%">
+            <tr>
+                <td> CIN</td>
+                <td> Nom Parent</td>
+                <td> Prenom Parent</td>
+                <td> Ville</td>
+                <td> Nombre d'enfant</td>
+                <td> Adresse Mail</td>
+                <td> Etat</td>
+            </tr>
+            {% for parent in some %}
+                <tr>
+                    <td> {{ parent.cinParent }} </td>
+                    <td> {{ parent.nomParent }} </td>
+                    <td> {{ parent.prenomParent }} </td>
+                     <td> {{ parent.villeParent }} </td>
+                     <td> {{ parent.nbEnfant }} </td>
+                      <td> {{ parent.mailParent }} </td>
+                      <td> {{ parent.enable }} </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </center>
+        <footer style="position: absolute; bottom: 0;">
+            <div style="float: left; width: 700px">
+                Babysitter <br>
+                1080 Lac 2 <br>
+                Tunis<br
+                    El Ghazela<br>
+            </div>
+           
+            
+            <div style="float: right">
+                Contact <br>
+                Tel: (+216)71.122.334 <br>
+                Email: contact@babysitter.com <br>
+                Site: www.babysitter.tn
+            </div>
+            
+                
+           
+            
+        </footer>
+    
+</body>
+</html>

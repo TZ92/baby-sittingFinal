@@ -1,0 +1,51 @@
+{% extends "PidevbackBundle::layout.html.twig" %} 
+
+{% block title %}PidevbackBundle:Administrateur:ajout{% endblock %}
+
+{% block body %}
+<h1> Formulaire de recherche </h1>
+<form  method="POST" action="" >
+    Liste des garderie par ville : <input type="text" name="villeGarderie"/>
+    <input class="btn btn-primary" type="submit" value="Chercher">
+</form>
+<h1> Liste des garderie </h1>
+<table class="table-hover">
+    <tr>
+        <th>Id Garderie</th>
+        <th>Nom garderie</th>
+        <th>adresse garderie</th>
+        <th>Ville</th>
+        <th>Numéro tél :</th>
+        <th>Adresse e-mail</th>
+        <th>Capacité</th>
+        <th>Description</th>
+        <th> </th>
+        <th></th>
+    </tr>
+    {% for m in Garderie %}
+        <tr>
+            <td>{{m.idGarderie}}</td>
+            <td>{{m.nomGarderie}}</td>
+            <td>{{m.adresseGarderie}}</td>
+            <td>{{m.villeGarderie}}</td>
+            <td>{{m.numTel}}</td>
+            <td>{{m.contactGarderie}}</td>
+            <td>{{m.capaciteGarderie}}</td>
+            <td>{{m.descriptionGarderie}}</td>
+            <td>
+                <a role="btn" class="btn btn-default" href="{{path("updateGarderie",{idgarderie:m.idgarderie})}}">Mise à jour</a>
+            </td>
+            <td>
+                <a role="btn" class="btn btn-default"  href="{{path("deleteGarderie",{idgarderie:m.idgarderie})}}">Supprimer</a>
+            </td>
+   
+
+    {% endfor %}
+    <tr>
+        <td>
+        
+            <a href="{{path('ajoutGarderie')}}" class="btn btn-default">create new entry</a>
+        </td>
+    </tr>
+</table>
+  {% endblock %}

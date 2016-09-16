@@ -1,0 +1,85 @@
+Parent:
+    type: entity
+    table: parent
+    fields:
+        idParent:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            column: id_parent
+            generator:
+                strategy: IDENTITY
+        cinParent:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: cin_parent
+        nomParent:
+            type: string
+            length: 30
+            fixed: false
+            nullable: false
+            column: nom_parent
+        prenomParent:
+            type: string
+            length: 30
+            fixed: false
+            nullable: false
+            column: prenom_parent
+        villeParent:
+            type: string
+            length: 20
+            fixed: false
+            nullable: false
+            column: ville_parent
+        adresseParent:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: adresse_parent
+        numtelParent:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: numtel_parent
+        mailParent:
+            type: string
+            length: 30
+            fixed: false
+            nullable: false
+            column: mail_parent
+        nbEnfant:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: nb_enfant
+        mdp:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+        infoEnfant:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+            column: info_enfant
+        description:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+        dateInscri:
+            type: date
+            nullable: true
+            column: date_inscri
+        dateMaj:
+            type: datetime
+            nullable: true
+            column: date_MAJ
+        enable:
+            type: boolean
+            nullable: false
+    lifecycleCallbacks: {  }

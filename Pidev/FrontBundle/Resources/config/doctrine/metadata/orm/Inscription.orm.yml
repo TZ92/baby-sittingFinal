@@ -1,0 +1,23 @@
+Inscription:
+    type: entity
+    table: inscription
+    fields:
+        idBabysitter:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            column: id_babysitter
+        idParent:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            column: id_parent
+        idOffre:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            column: id_offre
+    lifecycleCallbacks: {  }

@@ -1,0 +1,49 @@
+{# empty Twig template #}
+<html>
+    <head>
+        <style type="text/css">html, body, #map-canvas { height: 100%; margin: 60; padding: 0;}</style>
+        <script type="text/javascript"
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhkjctP24eakU8V4Bs2uoER3IN33ViqPc">           
+        </script>
+        <script type="text/javascript">
+            function initialize() 
+            {
+                var lat=document.getElementById('lat').value;
+                var lng=document.getElementById('lng').value;
+                var myCenter=new google.maps.LatLng(lat,lng);
+                var marker;
+                
+                //1ère méthode: On peut au lieu de déclarer une variable myLatlng mentionner directement les valeurs dans center
+		/*var mapOptions = 
+		{
+                    zoom: 8,
+                    center: {lat: 33.8859195, lng: 9.5356966}
+		};
+		var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);*/
+        
+                //2ème méthode
+                var myLatlng = new google.maps.LatLng(33.8859195, 9.5356966);
+		var mapOptions = 
+		{
+                    zoom: 8,
+                    center: myLatlng
+		};  
+                var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+                
+                //to add the marker to the map, use the 'map' property
+                var marker= new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    animation:google.maps.Animation.BOUNCE,
+                    title: "Ici votre position"      
+                });
+                marker.setMap(map);
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+    </head>
+    <body>
+        {% block container %}
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,32 @@
+{% extends "PidevbackBundle::layout.html.twig" %} 
+{% block body %}
+
+        {# La partie du code sans le template #}
+        {% block menu1 %} Espace de Services {% endblock  %}
+        {% block menu %}   Ajout d'un nouveau Service{% endblock  %}
+        {# Form est le formulaire qu'on a passé dans l'action addAction #}
+        <form action="" method="post">
+            {# {{ form_widget(Form) }} #}
+            <table class="table table-hover">
+                <tr>
+                    <td>Service :</td>
+                    <td>{{ form_widget(Form.typeService) }}</td>
+                </tr>
+                <tr>
+                    <td>Description :</td>
+                    <td>{{ form_widget(Form.description) }}</td>
+                </tr>
+                <tr>
+                    <td>Categorie :</td>
+                    <td>{{ form_widget(Form.idCategorie) }}</td>
+                </tr>
+            </table>
+            <br/>
+            <input class="btn btn-primary" type="submit" value="Ajouter"/>
+            {{ form_rest(Form) }}
+        </form>
+        {#fin de La partie du code #}
+        {% endblock %}
+
+
+
